@@ -13,16 +13,3 @@ export const loginUserSchema = {
     password: Joi.string().required(),
   }),
 };
-
-export const refreshUserSessionSchema = {
-  cookies: Joi.object({
-    sessionId: Joi.string().uuid().required(),
-    refreshToken: Joi.string().required(),
-  }),
-};
-
-export const logoutUserSchema = {
-  cookies: Joi.object({
-    sessionId: Joi.string().uuid().required(),
-  }),
-};
